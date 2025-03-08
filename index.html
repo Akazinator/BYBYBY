@@ -1,0 +1,84 @@
+<html lang="ru">
+    <header>
+<body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотки</title>
+    <link rel="stylesheet" href="styles.css">
+    <button class="orange-button">Фотографии</button>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кнопка "Адрес"</title>
+    <link rel="stylesheet" href="styles.css">
+    <button class="address-button">Отзывы</button>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кнопка отзывы</title>
+    <link rel="stylesheet" href="styles.css">
+    <button class="animated-button">Связь с нами</button>
+    
+</head>
+</body>
+    </header>
+      <main>
+            <h1>Космостар</h1>
+    <ul>
+<p><li>Бассейны с шариками для весёлого погружения и игр.</li>
+<li>Горки , ведущие прямо в бассейн с шариками, для адреналина и радости.</li>
+<li>Лабиринты , где дети смогут исследовать пространство и тренировать логическое мышление.</li>
+<li>Маленькое баскетбольное и футбольное поля для спортивных активностей.</li>
+<li>Отдельные комнаты для проведения дней рождения , где можно организовать праздничную программу с друзьями.</li></p>
+    </ul>
+<h1>Фотографии</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Анимированная фотолента</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="photo-slider">
+    <button class="prev-button" onclick="moveSlider(-1)">&#10094;</button>
+    <div class="slider-container">
+      <div class="slider-track">
+        <img src="https://avatars.mds.yandex.net/i?id=9e7fc37be6c0a597c36558ffea3532b4_l-5432784-images-thumbs&n=13" alt="Image 1" class="slider-item">
+        <img src="https://avatars.mds.yandex.net/i?id=0f4dbb56a1748b2a1d06e94cd3a042b18e324c09-10355125-images-thumbs&n=13" alt="Image 2" class="slider-item">
+        <img src="https://img.promportal.su/foto/good_fotos/2970/29707205/myagkie-igrovie-mati_foto_largest.jpg" alt="Image 3" class="slider-item">
+        <img src="https://avatars.mds.yandex.net/i?id=5d61305c0843f2dfd11f4059de8949b32b3db1e6-10471435-images-thumbs&n=13" alt="Image 4" class="slider-item">
+      </div>
+    </div>
+    <button class="next-button" onclick="moveSlider(1)">&#10095;</button>
+  </div>
+
+  <script>
+    let currentIndex = 0;
+    const sliderTrack = document.querySelector('.slider-track');
+    const sliderItems = document.querySelectorAll('.slider-item');
+    const itemWidth = sliderItems[0].clientWidth;
+
+    function moveSlider(direction) {
+      currentIndex += direction;
+      if (currentIndex >= sliderItems.length) {
+        currentIndex = 0;
+      } else if (currentIndex < 0) {
+        currentIndex = sliderItems.length - 1;
+      }
+      sliderTrack.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
+    }
+  </script>
+</body>
+      <p>Наша игровая комната доступна детям от 6-ти лет. Все время за вашим ребенком присматривает персонал, так что не волнуйтесь за него. Еду брать с собой в игровой зал категорически запрещено! Ждем вас в нашей игровой комнате "Космостар"!</p>
+      </main>
+  <footer>
+          <h1>Отзывы</h1>
+          <p>Ирина: 5 звезд<br>
+          Отличное место! Ходили туда с моим ребенком, ему очень понравилось, это очень<br> просторная комната по не большой цене, обязательно прийдем сюда еще! Всем советую!<br>
+            Ольга: 4 звезды<br>
+          Место хорошее, отвела туда своего ребенка, ему там очень понравилось, НО ОН ТАМ ПОРАНИЛСЯ, я так и не поняла где и как, но вам бы осмотреть все отракционы!<br>
+           Александра: 1 звезда<br>
+          УЖАСНОЕ МЕСТО, НИКОМУ НЕ СОВЕТУЮ! У МЕНЯ СЫН ТАМ УПАЛ! 
+          ПОРАНИЛ СЕБЕ РУКУ И ЖИВОТ! КУДА ТОЛЬКО ПЕРСОНАЛ СМОТРИТ!
+          УЖЕ НАПИСАЛА В КНИГУ ЖАЛОБ И РЕШИЛА НАПИСАТЬ ЕЩЕ СЮДА, ЧТО БЫ ВСЕ ЗНАЛИ!!! НИКОМУ НЕ СОВЕТУЮ!</p>   
+  </footer>
+</html> 
