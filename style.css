@@ -1,0 +1,282 @@
+body {
+ background-color:pink;
+}
+.orange-button {
+    position: relative;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Градиентный фон */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Эффект выпрыгивания при наведении */
+.orange-button:hover {
+    transform: translateY(-10px); /* Кнопка поднимается на 10px */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Увеличиваем тень */
+}
+
+/* Дополнительная анимация - пульсация фона */
+.orange-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff5722; /* Более яркий оранжевый */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 25px;
+}
+
+.orange-button:hover::after {
+    opacity: 0.3; /* Появляется полупрозрачный фон */
+}
+
+
+.animated-button {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Градиентный фон */
+    color: white; /* Белый текст */
+    padding: 15px 30px; /* Отступы внутри кнопки */
+    border: none; /* Без границы */
+    border-radius: 25px; /* Закругленные углы */
+    font-size: 18px; /* Размер шрифта */
+    cursor: pointer; /* Изменение курсора на "указатель" */
+    transition: all 0.3s ease; /* Плавные переходы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для объема */
+    position: relative; /* Для работы с псевдоэлементами */
+    overflow: hidden; /* Скрытие部分内容 при анимации */
+}
+
+/* Анимация фона при наведении */
+.animated-button:hover {
+    background: linear-gradient(90deg, #feb47b, #ff7e5f); /* Обратный градиент */
+    transform: translateY(-5px); /* Поднятие кнопки */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Увеличение тени */
+}
+
+/* Анимация текста */
+.animated-button span {
+    display: inline-block;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.animated-button:hover span {
+    transform: translateY(-10px); /* Подъем текста */
+}
+
+/* Добавление эффекта "ripple" (водная рябь) */
+.animated-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 50%;
+    transform: scale(1) translate(-50%, -50%);
+    animation: ripple 0.6s ease-out;
+}
+
+.animated-button:hover::after {
+    animation: ripple 0.6s ease-out;
+    opacity: 1;
+}
+
+/* Ключевые кадры для анимации "ripple" */
+@keyframes ripple {
+    to {
+        opacity: 0;
+        transform: scale(2.5) translate(-50%, -50%);
+    }
+}
+header {
+    background: linear-gradient(100deg, #feb47b, pink);
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box
+}
+body {
+    margin: 0;
+    padding:0;
+}
+.address-button {
+    position: relative;
+    padding: 12px 24px;
+    font-size: 16px;
+    color: #fff;
+     background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Градиентный фон */
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Эффект выпрыгивания при наведении */
+.address-button:hover {
+    transform: translateY(-10px); /* Кнопка поднимается на 10px */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Увеличиваем тень */
+}
+
+/* Дополнительная анимация - пульсация фона */
+.address-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Градиентный фон */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 20px;
+}
+
+.address-button:hover::after {
+    opacity: 0.3; /* Появляется полупрозрачный фон */
+}
+.contact-button {
+    position: relative;
+    padding: 12px 30px;
+    font-size: 16px;
+    color: #fff;
+   background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Градиентный фон */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Эффект выпрыгивания при наведении */
+.contact-button:hover {
+    transform: translateY(-10px); /* Кнопка поднимается на 10px */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Увеличиваем тень */
+}
+
+/* Дополнительная анимация - пульсация фона */
+.contact-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Градиентный фон */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 25px;
+}
+
+.contact-button:hover::after {
+    opacity: 0.3; /* Появляется полупрозрачный фон */
+}
+
+h1 {
+   text-align: center;
+   background-color: DimGray;
+   border-radius: 12px;
+   font-family: Times New Roman;
+}
+
+main {
+    background-color: LightSkyBlue;
+    padding: 0px;
+    margin:0px;
+}
+
+main body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.photo-slider {
+  position: relative;
+  width: 600px;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-item {
+  min-width: 100%;
+  height: auto;
+}
+
+/* Стрелки */
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+main li {
+    font-family: sans-serif;
+}
+footer {
+    background:RosyBrown;
+    
+}
+footer p {
+ background-color: SlateGray;
+ color: white;
+ font-family: Lucida Sans Unicode;
+}
+
+main p {
+    font-family: sans-serif;
+}
