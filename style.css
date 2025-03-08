@@ -280,3 +280,6 @@ footer p {
 main p {
     font-family: sans-serif;
 }
+nav {
+ text-align: center;
+}
